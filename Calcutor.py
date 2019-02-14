@@ -1,23 +1,23 @@
-# Program make a simple calculator that can add, subtract, multiply and divide using functions
 
-# This function adds two numbers 
+from fractions import Fraction
+from fractions import gcd
+
 def add(x, y):
    return x + y
 
-# This function subtracts two numbers 
+
 def subtract(x, y):
    return x - y
 
-# This function multiplies two numbers
+
 def multiply(x, y):
    return x * y
 
-# This function divides two numbers
 def divide(x, y):
    return x / y
 
 
-# Take input from the user 
+
 
 
 num1 = int(input("Enter first number: "))
@@ -35,8 +35,16 @@ elif choice == '*':
 
 elif choice == '/':
    print(num1,"/",num2,"=", divide(num1,num2))
+
+elif choice == 'f':
+   i = Fraction(num1, num2)
+   print(i)
+
+elif choice == 'gcd':
+   print(gcd(num1, num2)) 
 else:
    print("Invalid input")
+
 
 
 
